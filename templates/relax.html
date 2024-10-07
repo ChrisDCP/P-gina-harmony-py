@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+    
+{%block body %}
+    <style>
+        .bg-purple-dark {
+            background-color: #4C1D95;
+        }
+        .txt-gradient {
+            background: linear-gradient(to right, #F472B6, #FDE68A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+
+
+<body class="bg-purple-dark text-white">
+    <div class="container py-5">
+        <h1 class="text-center mb-5 txt-gradient">Relajación</h1>
+
+        <section class="mb-5">
+            <h2 class="mb-4 txt-gradient">Sonidos Relajantes</h2>
+            <div id="soundCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lluvia suave</h5>
+                                        <p class="card-text">Sonido relajante de lluvia ligera cayendo.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Reproducir</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Olas del mar</h5>
+                                        <p class="card-text">Sonido calmante de olas rompiendo en la playa.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Reproducir</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bosque tranquilo</h5>
+                                        <p class="card-text">Sonidos de la naturaleza en un bosque sereno.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Reproducir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Melodía de piano</h5>
+                                        <p class="card-text">Suave melodía de piano para relajarse.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Reproducir</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Canto de pájaros</h5>
+                                        <p class="card-text">Dulce canto de pájaros en la mañana.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Reproducir</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Viento suave</h5>
+                                        <p class="card-text">Sonido relajante de una brisa ligera.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Reproducir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#soundCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#soundCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-4 txt-gradient">Meditaciones Guiadas</h2>
+            <div id="meditationCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Meditación de 5 minutos</h5>
+                                        <p class="card-text">Breve meditación para principiantes.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Comenzar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Meditación para dormir</h5>
+                                        <p class="card-text">Relajación profunda para antes de dormir.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Comenzar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Meditación de gratitud</h5>
+                                        <p class="card-text">Enfócate en lo positivo de tu vida.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Comenzar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Meditación de atención plena</h5>
+                                        <p class="card-text">Practica la atención en el momento presente.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Comenzar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Meditación para ansiedad</h5>
+                                        <p class="card-text">Reduce la ansiedad y encuentra calma.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Comenzar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Meditación de visualización</h5>
+                                        <p class="card-text">Imagina un lugar tranquilo y relajante.</p>
+                                        <button class="btn btn-outline-light"><i class="bi bi-play-circle"></i> Comenzar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#meditationCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#meditationCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-4 txt-gradient">Técnicas de Relajación</h2>
+            <div id="techniqueCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Respiración profunda</h5>
+                                        <p class="card-text">Aprende a controlar tu respiración para relajarte.</p>
+                                        <a href="#" class="btn btn-outline-light">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Relajación muscular progresiva</h5>
+                                        <p class="card-text">Técnica para relajar grupos musculares específicos.</p>
+                                        <a href="#" class="btn btn-outline-light">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Visualización guiada</h5>
+                                        <p class="card-text">Usa tu imaginación para crear un lugar de paz.</p>
+                                        <a href="#" class="btn btn-outline-light">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mindfulness</h5>
+                                        <p class="card-text">Practica la atención plena en tu vida diaria.</p>
+                                        <a href="#" class="btn btn-outline-light">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Yoga para relajación</h5>
+                                        <p class="card-text">Posturas de yoga suaves para reducir el estrés.</p>
+                                        <a href="#" class="btn btn-outline-light">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card bg-dark text-white h-100 card-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Autohipnosis</h5>
+                                        <p class="card-text">Técnicas de autohipnosis para la relajación profunda.</p>
+                                        <a href="#" class="btn btn-outline-light">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#techniqueCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#techniqueCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+{%endblock%}
+</html>

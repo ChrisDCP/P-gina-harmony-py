@@ -1,0 +1,147 @@
+<style>
+    .bg-purple-dark {
+        background-color: #6322c5;
+    }
+
+    .txt-gradient {
+        background: linear-gradient(to right, #F472B6, #FDE68A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }    
+</style>
+
+{% extends "base.html" %}
+
+{%block body %}
+
+<body class="bg-purple-dark ">
+    <div class="container">
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="../static/RelaxMeditation.jpg" class="d-block w-100 rounded-5" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="txt-gradient">Informate sobre el estres</h5>
+                        <p class="text-light">Enterate de como el estres afecta a tu cuerpo y de que manera puedes aminorarlo</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../static/RelaxHearing.jpg" class="d-block w-100 mh-90 rounded-5" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="txt-gradient">Relajate y medita</h5>
+                        <p class="text-light">Mejora tu entorno con sonidos relajantes y meditaciones guadas por voz</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/ConectWithIa.png" class="d-block w-100 mh-90 rounded-5" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Interactua con la IA </h5>
+                        <p>Habla con la inteligecia artificial que te guiara en metodos que ayudan al control de e estres y la ansiedad</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>|
+
+        <div class="row text-center">
+            <div>
+                <h2 class="text-center mt-5 mb-4 txt-gradient">Haz mas ameno tu trabajo y relajate</h2>
+            </div>
+            <div class="col mt-5">
+                <a href="/tense">
+                    <img src="" alt="">
+                    <p class="shadow p-3 mb-2 bg-dark text-white rounded-3 text-decoration-none">Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Similique temporibus cumque quas ab unde commodi dolorum ea, quaerat adipisci
+                        rem nam eum hic accusantium aliquam ex? Consequuntur tempore iure porro.</p>
+                </a>
+            </div>
+            <div class="col mt-5">
+                <a href="/meditate">
+                    <img src="" alt="">
+                    <p class="shadow p-3 mb-5 bg-body-tertiary rounded-3 text-decoration-none">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Autem quam non itaque iusto est vitae labore, eius ut corporis sequi veniam.
+                        Eius accusantium nostrum veniam eveniet dolorem, harum nam. Suscipit?</p>
+                </a>
+            </div>
+            <div class="col mt-5">
+                <a href="">
+                    <img src="" alt="">
+                    <p class="shadow p-3 mb-2 bg-dark text-white rounded-3 text-decoration-none">Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Saepe nisi adipisci voluptas laboriosam rerum? Nostrum quam laboriosam odio
+                        amet sapiente voluptate error, qui distinctio non corrupti doloremque ullam! Praesentium,
+                        impedit.</p>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<footer>
+    <div class="row p-5 pb-3 bg-dark text-bg-dark">
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <p class="h3">APP SYSTEM</p>
+            <p class="text-secondary">Juigalpa, Chontales</p>
+            <p class="text-secondary">Nicaragua</p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <p class="h5 mb-3">Cursos</p>
+            <div class="mb-2">
+                <a class="text-secondary text-decoration-none" href="#">Python</a>
+            </div>
+            <div class="mb-2">
+                <a class="text-secondary text-decoration-none" href="#">JavaScript</a>
+            </div>
+            <div class="mb-2">
+                <a class="text-secondary text-decoration-none" href="#">Bootstrap</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <p class="h5 mb-3">Links</p>
+            <div class="mb-2">
+                <a class="text-secondary text-decoration-none" href="#">Terms & Conditions</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <p class="h5 mb-3">Contacto</p>
+            <div class="mb-2">
+                <a class="text-secondary text-decoration-none btn-1" href="#"><i class="bi bi-facebook"></i>
+                    Facebook</a>
+            </div>
+            <div>
+                <a class="text-secondary text-decoration-none" href="#"><i class="bi bi-instagram"></i> Instagram</a>
+            </div>
+        </div>
+        <hr>
+        <div class="col-xs-12 pt-2">
+            <p class="text-white text-center">&copy; Copyright - All rights reserved 2024</p>
+        </div>
+    </div>
+
+
+</footer>
+{%endblock%}
+
+</html>
