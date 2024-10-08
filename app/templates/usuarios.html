@@ -26,14 +26,29 @@
                 <td>{{ usuario.name }}</td>
                 <td>{{ usuario.email }}</td>
                 <td>
-                    <button class="btn btn-primary btn-sm">Editar</button>
-                    <button class="btn btn-danger btn-sm">Eliminar</button>
+                    <form action="{{ url_for('actualizar_usuario_route', user_id=usuario.id) }}" method="post" style="display: inline;">
+                        <input type="text" name="name" value="{{ usuario.name }}" placeholder="Nuevo nombre">
+                        <input type="text" name="email" value="{{ usuario.email }}" placeholder="Nuevo email">
+                        <button class="btn btn-primary btn-sm">Editar</button>
+                    </form>
+                    <form action="{{ url_for('eliminar_usuario_route', user_id=usuario.id) }}" method="post" style="display: inline;">
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 
+    <!-- Formulario para crear usuario -->
+    <h3>Crear Usuario</h3>
+    <form action="{{ url_for('crear_usuario_route') }}" method="post">
+        <input type="text" name="name" placeholder="Nombre">
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit" class="btn btn-success">Crear</button>
+    </form>
+
+    <!-- pagination -->
     <nav>
         <ul class="pagination">
             {% if page > 1 %}
