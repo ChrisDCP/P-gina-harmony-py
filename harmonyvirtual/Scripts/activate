@@ -39,10 +39,10 @@ deactivate nondestructive
 if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
     # transform D:\path\to\venv to /d/path/to/venv on MSYS
     # and to /cygdrive/d/path/to/venv on Cygwin
-    export VIRTUAL_ENV=$(cygpath "C:\Users\marus\OneDrive\Documents\Harmony pagina py\harmonyvirtual")
+    export VIRTUAL_ENV=$(cygpath "C:\Users\crisc\Downloads\Harmony pagina py\Harmony pagina py\harmonyvirtual")
 else
     # use the path as-is
-    export VIRTUAL_ENV="C:\Users\marus\OneDrive\Documents\Harmony pagina py\harmonyvirtual"
+    export VIRTUAL_ENV="C:\Users\crisc\Downloads\Harmony pagina py\Harmony pagina py\harmonyvirtual"
 fi
 
 _OLD_VIRTUAL_PATH="$PATH"
