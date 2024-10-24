@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from app.models import get_users, post_user, put_user, delete_user
 from app import app 
 
@@ -24,7 +24,7 @@ def mostrar_usuarios():
 
     # Paginado
     page = request.args.get('page', 1, type=int)
-    per_page = 4
+    per_page = 5
     total = len(usuarios)
     start = (page - 1) * per_page
     end = start + per_page
@@ -36,23 +36,42 @@ def mostrar_usuarios():
 
 @app.route('/usuario/crear', methods=['POST'])
 def crear_usuario_route():
-    data = {
-        'name': request.form['name'],
-        'email': request.form['email']
-    }
-    post_user(data)
+    try:
+        data = {
+            'name': request.form.get('name'),
+            'email': request.form.get('email'),
+            'age': request.form.get('age'),
+            'country': request.form.get('country'),
+            'sex': request.form.get('sex')
+        }
+        post_user(data)
+        flash("Usuario agregado correctamente", "success") 
+    except Exception as e:
+        flash(f'Error al crear usuario: {e}', "danger")
+    
     return redirect(url_for('mostrar_usuarios'))
 
 @app.route('/usuario/actualizar/<user_id>', methods=['POST'])
 def actualizar_usuario_route(user_id):
-    data = {
-        'name': request.form['name'],
-        'email': request.form['email']
-    }
-    put_user(user_id, data)
+    try:
+        data = {
+            'name': request.form.get('name'),
+            'email': request.form.get('email'),
+            'age': request.form.get('age'),
+            'country': request.form.get('country'),
+            'sex': request.form.get('sex'),
+        }
+        put_user(user_id, data)
+        flash("Usuario actualizado correctamente", "success") 
+    except Exception as e:
+        flash(f'Error al actualizar usuario: {e}', "danger")
     return redirect(url_for('mostrar_usuarios'))
 
 @app.route('/usuario/eliminar/<user_id>', methods=['POST'])
 def eliminar_usuario_route(user_id):
-    delete_user(user_id)
+    try:
+        delete_user(user_id)
+        flash("Usuario eliminado correctamente", "success") 
+    except Exception as e:
+        flash(f'Error al eliminar usuario: {e}', "danger")
     return redirect(url_for('mostrar_usuarios'))
